@@ -1,0 +1,87 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(35, 200, 230); /* Ajusta el color de fondo según tus preferencias */
+  z-index: 1000; /* Ajusta el índice z para que el encabezado esté por encima del contenido */
+  padding: 10px; /* Ajusta el relleno según tus preferencias */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+  
+.navbar-nav {
+  flex-direction: row;
+}
+
+body {
+  background-color: #272D50;
+  padding-top: 80px; /* Ajusta el relleno superior del cuerpo para que el contenido no se solape con el encabezado */
+}
+
+.quienes-somos-container {
+    background-image: url('img/imgia.jpeg'); /* Cambia 'ruta/de/la/imagen.jpg' por la ruta de tu imagen de fondo */
+    background-size: cover; /* Para cubrir todo el contenedor */
+    background-position: center; /* Para centrar la imagen de fondo */
+    color: rgb(241, 220, 220); /* Color del texto */
+    padding: 30px; /* Espaciado interno */
+    font-family: 'Vollkorn SC', serif;
+}
+
+.quienes-somos-container h2 {
+    font-size: 25px; /* Tamaño de fuente del encabezado */
+    font-weight: bold; /* Peso de la fuente del encabezado */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.quienes-somos-container p {
+    font-size: 20px; /* Tamaño de fuente del párrafo */
+    line-height: 1.5; /* Altura de línea */
+}
+
+.productos-container {
+  background-image: url('img/cctv2.jpg'); /* Cambia 'ruta/de/la/imagen.jpg' por la ruta de tu imagen de fondo */
+  background-size: cover; /* Para cubrir todo el contenedor */
+  background-position: center; /* Para centrar la imagen de fondo */
+  color: rgb(2, 17, 26); /* Color del texto */
+  padding: 30px; /* Espaciado interno */
+  font-family: 'Vollkorn SC', serif;
+}
+
+.productos-container h2 {
+  font-size: 40px; /* Tamaño de fuente del encabezado */
+  font-weight: bold; /* Peso de la fuente del encabezado */
+  margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.productos-container p {
+  font-size: 15px; /* Tamaño de fuente del párrafo */
+  line-height: 1.5; /* Altura de línea */
+}
+
+.nuestros-trabajos-container {
+  line-height: 1; /* Altura de línea */
+  font-size: 60px; /* Tamaño de fuente del encabezado */
+  color: rgb(231, 231, 231); /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  font-family: 'Vollkorn SC', serif;
+}
+
+
+
+.nuestros-trabajos p {
+  font-size: 40px; /* Tamaño de fuente del párrafo */
+  
+}
+
+#trabajos img {
+  display: block;
+  margin: 0 auto;
+  width: 500px; /* Cambia este valor según tus preferencias */
+  height: auto;
+}

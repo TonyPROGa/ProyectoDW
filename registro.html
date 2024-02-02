@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar datos de Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('img/registro.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 5px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 5px;
+            background-color: #007bff;
+            color: rgb(201, 171, 3);
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            margin-right: 5px; /* Espacio entre el logotipo y el texto */
+        }
+
+        .logo h1 {
+           margin: 0; /* Eliminar margen por defecto del h1 */
+        }
+        .titulo {
+           text-align: center;
+        }
+        .password-toggle {
+            position: relative;
+        }
+
+        .password-toggle .toggle-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .inicio-button {
+            width: 100%; /* Asegurar que el botón ocupe todo el ancho */
+            text-align: center; /* Centrar el botón */
+            margin-top: 20px; /* Agregar espacio superior para separarlo del formulario */
+        }
+
+        .inicio-button button {
+            padding: 10px 20px; /* Ajustar el padding para hacer el botón más grande */
+            background-color: #007bff; /* Cambiar el color de fondo a azul */
+            color: #e69706; /* Cambiar el color del texto a blanco */
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; /* Agregar bordes redondeados */
+            font-weight: bold; /* Hacer el texto en negrita */
+            text-transform: uppercase; /* Convertir el texto a mayúsculas */
+            transition: background-color 0.3s; /* Agregar transición para suavizar el cambio de color de fondo */
+        }
+
+        .inicio-button button:hover {
+            background-color: #0056b3; /* Cambiar el color de fondo al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo">
+            <img width="136" height="92" src="C:\Users\HP\Desktop\Proyecto de Desarrollo Web\ProyectoFinal\img\logotipo.svg" class="attachment-full size-full wp-image-358" alt="">
+        </div>
+        <div class="logo-text">
+            <h1>Bezalel</h1>
+        </div>
+    </div>
+    <div class="container">
+        <form>
+            <h1 class="titulo">REGISTRO</h1>
+            <div class="form-group">
+                <label for="form-field-field_b2ad9f7" class="elementor-field-label elementor-screen-only">
+                    Nombre y Apellido							</label>
+                <input size="1" type="text" name="form_fields[field_b2ad9f7]" id="form-field-field_b2ad9f7" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Nombre y Apellido"> 
+            </div>
+            <div class="form-group">
+                <label for="form-field-field_b2ad9f7" class="elementor-field-label elementor-screen-only">
+                    Usuario							</label>
+                <input size="1" type="text" name="form_fields[field_b2ad9f7]" id="form-field-field_b2ad9f7" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Usuario"> 
+            </div>
+            <div class="form-group">
+                <label for="form-field-field_b2ad9f7" class="elementor-field-label elementor-screen-only">
+                    Correo electrónico							</label>
+                <input size="1" type="text" name="form_fields[field_b2ad9f7]" id="form-field-field_b2ad9f7" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Correo electrónico"> 
+            </div>
+            
+            <div class="form-group password-toggle">
+                <label for="contrasena" class="elementor-field-label elementor-screen-only">Contraseña</label>
+                <input type="password" id="contrasena" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Contraseña" required>
+                <span class="toggle-icon" onclick="togglePasswordVisibility('contrasena')">&#x1F441;</span>
+            </div>
+            <div class="form-group password-toggle">
+                <label for="repetir-contrasena" class="elementor-field-label elementor-screen-only">Repetir Contraseña</label>
+                <input type="password" id="repetir-contrasena" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Repetir Contraseña" required>
+                <span class="toggle-icon" onclick="togglePasswordVisibility('repetir-contrasena')">&#x1F441;</span>
+            </div>
+            <div class="form-group">
+                <button type="submit">Registrar</button>
+
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="inicio-button">
+        <button type="button" onclick="irAIndex()">Inicio</button>
+    </div>
+    
+    <script>
+        function togglePasswordVisibility(inputId) {
+            const input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+        function irAIndex() {
+            // Redirigir a la página index.html
+            window.location.href = "index.html";
+        }
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            alert('Registro exitoso!');
+        });
+    
+    </script>
+</body>
+</html>
